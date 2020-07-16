@@ -7,19 +7,20 @@ title: Yoda Talker!
 <p>UNDER CONSTRUCTION</p>
 <form id="myForm">
   If you say: <input type="text" name="fname"><br><br>
-  <input type="button" onclick="loadXMLDoc()" value="Then Yoda would say:">
+  <input type="button" onclick="talkToYoda()" value="Then Yoda would say:">
 </form>
 
-<script>
-function loadXMLDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
+<script type="text/javascript">
+    function talkToYoda() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                alert(xhr.response);
+            }
+        }
+        xhr.open('get', 'http://100.26.9.225/yoda', true);
+        xhr.setRequestHeader('Content-Type', 'text/plain');
+        xhr.send();
+        return xhr.response;
     }
-  };
-  xhttp.open("GET", "xmlhttp_info.txt", true);
-  xhttp.send();
-}
 </script>
