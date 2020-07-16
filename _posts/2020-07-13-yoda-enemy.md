@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Yoda's Enemy!"
+title:  "Yoda's Enemy! Chapter I: Crashes at Hogwarts"
 ---
-# Yoda's Enemy
 
 One sunny afternoon, at Hogwarts School of Witchcraft and Wizardry, Dumbledore the Headmaster was doing some math when he heard a loud crashing sound. 
 It seemed to be coming from outside. Dumbledore looked out of his window, and saw what seemed like an old, dirty, broken spaceship. Dumbledore hadn’t realized what he saw, and peered out of the window again. 
