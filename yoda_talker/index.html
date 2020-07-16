@@ -5,13 +5,21 @@ title: Yoda Talker!
 <h1>{{ page.title }}</h1>
 
 <p>UNDER CONSTRUCTION</p>
-<form id="myForm" action="/action_page.php">
+<form id="myForm">
   You said: <input type="text" name="fname"><br><br>
-  <input type="button" onclick="myFunction()" value="Yoda says:">
+  <input type="button" onclick="loadXMLDoc()" value="Yoda says:">
 </form>
 
 <script>
-function myFunction() {
-  document.getElementById("myForm").submit();
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "xmlhttp_info.txt", true);
+  xhttp.send();
 }
 </script>
