@@ -15,12 +15,12 @@ title: Yoda Talker!
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
-                alert(xhr.response);
+                alert(xhr.status)
+                alert(xhr.responseText);
             }
         }
         xhr.open('get', 'http://100.26.9.225/yoda', true);
         xhr.setRequestHeader('Content-Type', 'text/plain');
         xhr.send("Yoda is cool");
-        return xhr.response;
     }
 </script>
